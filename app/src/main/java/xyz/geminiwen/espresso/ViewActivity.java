@@ -3,9 +3,10 @@ package xyz.geminiwen.espresso;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class ToastActivity extends AppCompatActivity implements View.OnClickListener {
+public class ViewActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,6 @@ public class ToastActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "Binggo!", Toast.LENGTH_LONG).show();
+        ((TextView)findViewById(R.id.btn)).setText("Binggo!");
     }
 }

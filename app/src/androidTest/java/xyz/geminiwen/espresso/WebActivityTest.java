@@ -59,6 +59,7 @@ public class WebActivityTest {
                 .perform(click());
 
         onView(withText("hello world!"))
+                // toast is not in the same window with activity
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
                 .check(matches(isDisplayed()));
         unregisterIdlingResources(okhttp);
